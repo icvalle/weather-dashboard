@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    line-height: 1.25em;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+h1 {
+    font-size: 2.5em;
+    letter-spacing: .5px;
+}
+
+h3 {
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: .5em;
+}
+
+.jumbotron {
+  padding: 1.25em .5em 1em;
+}
+
+#cityHighlight {
+  border: 2px solid #d1d6d8;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 0 1em 2em;
+  padding: 1em 1.5em;
+}
+
+#uvColor {
+  background-color: red;
+  border-radius: 5px;
+  color: #FFF;
+  padding: .25em .5em;
+}
+
+#inputCity {
+  display: inline-block;
+  margin: .5em 0;
+  width: 80%;
+}
+
+#searchBtn {
+  margin: .5em 0 .5em .15em;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Weather Dashboard</title>
+
+</head>
+<body>
+
+    <header class="jumbotron">
+          <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row">
+          <section class="col-12 col-md-4 col-lg-3">
+            <div class="card custom-card">
+              <h4 class="card-header">Search for a City:</h4>
+
+              <form>
+                <div class="col-auto">
+                  <input type="password" class="form-control" id="inputCity" placeholder="Type City">
+                  <button id="searchBtn" type="submit" class="btn btn-primary fa fa-search"></button>
+                </div>
+              </form>
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">City</li>
+              </ul>
+            </div>
+          </section>
+    
+          <section id="cityHighlight" class="col-11 col-md-7 col-lg-8">
+            <h3>Atlanta (8/15/2019) cloud</h3>
+            <p id="cityTemp">Temperature: </p>
+            <p id="cityHumid">Humidity: </p>
+            <p id="cityWind">Wind Speed: </p>
+            <p id="cityUV">UV Index: <span id="uvColor">#</span></p>
+          </section>
+
+        </div>
+
+
+        </div>
+      </main>
+    
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="./assets/javascript/javascript.js"></script>
+</body>
+</html>
