@@ -28,15 +28,27 @@ h3 {
   border: 2px solid #d1d6d8;
   border-radius: 8px;
   box-sizing: border-box;
+  display: none;
   margin: 0 1em 2em;
   padding: 1em 1.5em;
 }
 
-#uvColor {
-  background-color: red;
+#uvBg {
   border-radius: 5px;
   color: #FFF;
   padding: .25em .5em;
+}
+
+.favorable {
+  background-color: #009ca7;
+}
+
+.moderate {
+  background-color: #ffa500;
+}
+
+.severe {
+  background-color: #ff0000;
 }
 
 #inputCity {
