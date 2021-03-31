@@ -19,36 +19,80 @@
           <h1>Weather Dashboard</h1>
     </header>
 
-    <main class="container-fluid">
-        <div class="row">
-          <section class="col-12 col-md-4 col-lg-3">
-            <div class="card custom-card">
+    <main>
+          <section id="searchColumn" class="col-12 col-md-4 col-lg-3">
+            <div class="card">
               <h4 class="card-header">Search for a City:</h4>
 
               <form>
-                <div class="col-auto">
+                <div class="col-auto inputbtn">
                   <input type="text" class="form-control" id="inputCity" placeholder="Type City">
                   <button id="searchBtn" type="submit" class="btn btn-primary fa fa-search"></button>
                 </div>
               </form>
 
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">City</li>
+              <ul id="cityList" class="list-group list-group-flush">
               </ul>
             </div>
           </section>
     
           <section id="cityHighlight" class="col-11 col-md-7 col-lg-8">
-            <h3 id="cityName">City</h3>
-            <p id="cityTemp">Temperature: </p>
-            <p id="cityHumid">Humidity: </p>
-            <p id="cityWind">Wind Speed: </p>
-            <p id="cityUV">UV Index: <span id="uvBg" class="moderate">#</span></p>
+            <h2 id="cityName">City</h2>
+            <p id="cityTemp">Temperature:</p>
+            <p id="cityHumid">Humidity:</p>
+            <p id="cityWind">Wind Speed:</p>
+            <p id="cityUV">UV Index:</p>
           </section>
 
-        </div>
-
-
+        <div id="forecast5Days" class="col-11 col-md-7 col-lg-8">
+        <h3>5-Day Forecast:</h3>
+          <section class="row">
+            <figure>
+              <div id="forecastCards" class="card">
+                <div class="card-body">
+                  <h5 id="day1" class="card-title">0/00/0000</h5>
+                  <p id="day1Temp" class="card-text">Temp:</p>
+                  <p id="day1Humid" class="card-text">Humidity:</p>
+                </div>
+              </div>
+            </figure>
+            <figure>
+              <div id="forecastCards" class="card">
+                <div class="card-body">
+                  <h5 id="day2" class="card-title">0/00/0000</h5>
+                  <p id="day2Temp" class="card-text">Temp:</p>
+                  <p id="day2Humid" class="card-text">Humidity:</p>
+                </div>
+              </div>
+            </figure>
+            <figure>
+              <div id="forecastCards" class="card">
+                <div class="card-body">
+                  <h5 id="day3" class="card-title">0/00/0000</h5>
+                  <p id="day3Temp" class="card-text">Temp:</p>
+                  <p id="day3Humid" class="card-text">Humidity:</p>
+                </div>
+              </div>
+            </figure>
+            <figure>
+              <div id="forecastCards" class="card">
+                <div class="card-body">
+                  <h5 id="day4" class="card-title">0/00/0000</h5>
+                  <p id="day4Temp" class="card-text">Temp:</p>
+                  <p id="day4Humid" class="card-text">Humidity:</p>
+                </div>
+              </div>
+            </figure>
+            <figure>
+              <div id="forecastCards" class="card">
+                <div class="card-body">
+                  <h5 id="day5" class="card-title">0/00/0000</h5>
+                  <p id="day5Temp" class="card-text">Temp:</p>
+                  <p id="day5Humid" class="card-text">Humidity:</p>
+                </div>
+              </div>
+            </figure>
+          </section>
         </div>
     </main>
     

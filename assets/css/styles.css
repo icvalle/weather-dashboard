@@ -4,7 +4,7 @@ body {
     line-height: 1.25em;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
   font-weight: bold;
   text-align: center;
@@ -14,14 +14,58 @@ h1 {
     letter-spacing: .5px;
 }
 
-h3 {
+h2 {
   letter-spacing: 1px;
   text-align: left;
   margin-bottom: .5em;
 }
 
+h3 {
+  display: block;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: .5em;
+}
+
+h5 {
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
 .jumbotron {
   padding: 1.25em .5em 1em;
+}
+
+main {
+  min-height: 100vh;
+}
+
+#searchColumn {
+  float: left;
+  margin-bottom: 1.5em;
+  height: 100vh;
+}
+
+.form-control {
+  display: inline-block;
+  height: auto;
+  width: 80%;
+}
+
+.inputbtn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+#inputCity {
+  flex: 4 1 195px;
+  margin: .5em .25em .5em 0;
+}
+
+#searchBtn {
+  margin: .5em 0;
+  flex: 1 1 60px;
 }
 
 #cityHighlight {
@@ -29,8 +73,10 @@ h3 {
   border-radius: 8px;
   box-sizing: border-box;
   display: none;
+  float: left;
   margin: 0 1em 2em;
   padding: 1em 1.5em;
+  height: fit-content;
 }
 
 #uvBg {
@@ -51,12 +97,26 @@ h3 {
   background-color: #ff0000;
 }
 
-#inputCity {
-  display: inline-block;
-  margin: .5em 0;
-  width: 80%;
+#forecast5Days {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#searchBtn {
-  margin: .5em 0 .5em .15em;
+#forecastCards {
+  background-color: #5f8091;
+  border: none;
+  color: #FFF;
+  display: inline-block;
+  margin: .25em;
+  flex: 1 1 250px;
+}
+
+@media screen and (max-width: 768px) {
+  #searchColumn {
+    float: none;
+    margin-bottom: 1.5em;
+    height: fit-content;
+  }
 }
