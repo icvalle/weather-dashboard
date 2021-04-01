@@ -12,19 +12,15 @@ $(document).ready(function() {
   renderCities();
 
   $('#searchBtn').click(function(event){
-      event.preventDefault();
-      var searchEntry = $('#inputCity').val();
-      var searchCity = searchEntry.trim();
-      
-      $('#cityList').append('<li class="list-group-item">' + searchCity + '</li>');
-      var weatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchCity + '&appid=6aa2659bc92118766e2e14cd0b16066e&units=imperial';
-
-      cities.push(searchCity);
-      citySearchInput.value = "";
-
-      storeCities();
-      currentWeather(weatherUrl);
-      
+    event.preventDefault();
+    var searchEntry = $('#inputCity').val();
+    var searchCity = searchEntry.trim();
+    $('#cityList').append('<li class="list-group-item">' + searchCity + '</li>');
+    var weatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchCity + '&appid=6aa2659bc92118766e2e14cd0b16066e&units=imperial';
+    cities.push(searchCity);
+    citySearchInput.value = "";
+    storeCities();
+    currentWeather(weatherUrl);
   });
 
   function currentWeather(url) {
@@ -111,7 +107,14 @@ $(document).ready(function() {
     // Render a new li for each city
     for (var i = 0; i < cities.length; i++) {
       $('#cityList').append('<li class="list-group-item">' + cities[i] + '</li>');
+      
     }
   }
+
+  $('.list-group-item').click(function(event){
+    var cityLiInput = $(this).text();
+    var liCityUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityLiInput + '&appid=6aa2659bc92118766e2e14cd0b16066e&units=imperial';
+    currentWeather(liCityUrl);
+  });
 
 });   
