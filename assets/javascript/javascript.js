@@ -15,10 +15,20 @@ $(document).ready(function() {
     event.preventDefault();
     var searchEntry = $('#inputCity').val();
     var searchCity = searchEntry.trim();
-    $('#cityList').append('<li class="list-group-item">' + searchCity + '</li>');
+
+    var item = $('<li class="list-group-item">');
+    item.text(searchCity)
+    $('#cityList').append(item);
+    item.click(function(){
+      var cityLiInput = $(this).text();
+      var liCityUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityLiInput + '&appid=6aa2659bc92118766e2e14cd0b16066e&units=imperial';
+      currentWeather(liCityUrl);
+    });
+
     var weatherUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + searchCity + '&appid=6aa2659bc92118766e2e14cd0b16066e&units=imperial';
     cities.push(searchCity);
     citySearchInput.value = "";
+    
     storeCities();
     currentWeather(weatherUrl);
   });
@@ -107,11 +117,10 @@ $(document).ready(function() {
     // Render a new li for each city
     for (var i = 0; i < cities.length; i++) {
       $('#cityList').append('<li class="list-group-item">' + cities[i] + '</li>');
-      
     }
   }
 
-  $('.list-group-item').click(function(event){
+  $('.list-group-item').click(function(){
     var cityLiInput = $(this).text();
     var liCityUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityLiInput + '&appid=6aa2659bc92118766e2e14cd0b16066e&units=imperial';
     currentWeather(liCityUrl);
